@@ -18,17 +18,13 @@ class MoneyCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(10),
         child: Container(
           width: 200,
-          height: 200,
+          height: 250,
           decoration: BoxDecoration(
-            color: Colors.transparent,
+            color: Colors.green,
             borderRadius: BorderRadius.circular(10),
-            border: Border.all(
-              color: Colors.white,
-              width: 2,
-            ),
             boxShadow: const [
               BoxShadow(
                 color: Colors.grey,
@@ -40,13 +36,23 @@ class MoneyCard extends StatelessWidget {
           child: Stack(
             children: [
               BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.2),
-                  ),
-                ),
+                filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                child: Container(),
               ),
+              Container(
+                  decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.white.withOpacity(0.2),
+                ),
+                borderRadius: BorderRadius.circular(10),
+                gradient: LinearGradient(
+                    begin: Alignment.bottomRight,
+                    end: Alignment.topLeft,
+                    colors: [
+                      Colors.white.withOpacity(0.5),
+                      Colors.white.withOpacity(0.1),
+                    ]),
+              )),
               Padding(
                 padding: const EdgeInsets.only(top: 20),
                 child: Align(

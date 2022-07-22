@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       const Icon(
-                        Icons.home,
+                        Icons.account_circle,
                         color: Colors.white,
                         size: 30,
                       ),

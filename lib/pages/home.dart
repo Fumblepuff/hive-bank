@@ -121,6 +121,11 @@ class _HomePageState extends State<HomePage> {
                       cardType: 'Credit Card',
                       cardNumber: 9451,
                       amount: 678.92,
+                    ),
+                    MoneyCard(
+                      cardType: 'Credit Card',
+                      cardNumber: 8326,
+                      amount: 1437.05,
                     )
                   ],
                 ),

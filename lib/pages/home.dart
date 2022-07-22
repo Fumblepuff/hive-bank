@@ -106,29 +106,26 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 20),
 
             //Cards
-            SizedBox(
-              height: 300,
-              child: Expanded(
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: const [
-                    MoneyCard(
-                      cardType: 'Debit Card',
-                      cardNumber: 8008,
-                      amount: 4000.34,
-                    ),
-                    MoneyCard(
-                      cardType: 'Credit Card',
-                      cardNumber: 9451,
-                      amount: 678.92,
-                    ),
-                    MoneyCard(
-                      cardType: 'Credit Card',
-                      cardNumber: 8326,
-                      amount: 1437.05,
-                    )
-                  ],
-                ),
+            Expanded(
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  MoneyCard(
+                    cardType: 'Debit Card',
+                    cardNumber: 8008,
+                    amount: 4000.34,
+                  ),
+                  MoneyCard(
+                    cardType: 'Credit Card',
+                    cardNumber: 9451,
+                    amount: 678.92,
+                  ),
+                  MoneyCard(
+                    cardType: 'Credit Card',
+                    cardNumber: 8326,
+                    amount: 1437.05,
+                  )
+                ],
               ),
             ),
 

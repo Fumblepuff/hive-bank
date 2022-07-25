@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-//import 'package:hivebankapp/pages/home.dart';
+import 'package:hivebankapp/pages/home.dart';
 import 'package:hivebankapp/pages/login.dart';
+import 'package:hivebankapp/pages/register.dart';
 
 void main() async {
   await Hive.initFlutter();
@@ -29,7 +30,12 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoginPage(),
+        '/home': (context) => const HomePage(),
+        '/register': (context) => const RegistrationPage(),
+      },
     );
   }
 }

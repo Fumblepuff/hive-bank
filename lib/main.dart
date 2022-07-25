@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:hivebankapp/pages/home.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+//import 'package:hivebankapp/pages/home.dart';
+import 'package:hivebankapp/pages/login.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+  final box = await Hive.openBox('login');
   runApp(const MyApp());
 }
 
@@ -25,7 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }

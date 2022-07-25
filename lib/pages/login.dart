@@ -19,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(milliseconds: 800), () {
+    Timer(const Duration(milliseconds: 500), () {
       setState(() {
         fade = false;
       });
@@ -73,7 +73,6 @@ class _LoginPageState extends State<LoginPage> {
           ),
         );
       }
-      Navigator.pushNamed(context, '/home');
     }
   }
 
